@@ -15,8 +15,8 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 
 const Sidebar = () => {
   return (
-    <div classname='sidebar'>
-      <TwitterIcon />
+    <div className='sidebar'>
+      <TwitterIcon className='sidebar__twitterIcon' />
 
       <SidebarItem active Icon={HomeIcon} text='Home' />
       <SidebarItem Icon={SearchIcon} text='Explore' />
