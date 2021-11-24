@@ -10,28 +10,26 @@ const Post = ({ displayName, username, verified, text, image, avatar }) => {
   return (
     <div className='post'>
       <div className='post__avatar'>
-        <Avatar src='' />
+        <Avatar src={avatar} />
       </div>
       <div className='post__body'>
         <div className='post__header'>
           <div className='post_headerText'>
             <h3>
-              ALi Sadri{' '}
+              {displayName}{' '}
               <span className='post__headerSpecial'>
-                <VerifiedUserIcon className='post__badge' /> @asadri
+                {verified && <VerifiedUserIcon className='post__badge' />} @
+                {username}
               </span>
             </h3>
           </div>
 
           <div className='post__headerDescription'>
-            <p>building twitter clone with react</p>
+            <p>{text}</p>
           </div>
         </div>
 
-        <img
-          src='https://media2.giphy.com/media/pW9HxoGcgVeP9eeory/giphy.gif?cid=ecf05e47bb71077a5af6ee9ede51e192740fd8aeadfa318a&rid=giphy.gif&ct=g'
-          alt=''
-        />
+        <img src={image} alt='' />
 
         <div className='post__footer'>
           <ChatBubbleOutlineIcon fontSize='small' />
