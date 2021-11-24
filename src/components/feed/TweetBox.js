@@ -9,9 +9,13 @@ const TweetBox = () => {
         <div className='tweetBox__input'>
           <Avatar src={sample_avatar} />
           <input type='text' placeholder="What's happening?" />
-          {/* <input type='text' placeholder='Enter image URL' /> */}
         </div>
-        <Button>Tweet</Button>
+        <input
+          className='tweetBox__imageInput'
+          type='text'
+          placeholder='Enter image URL'
+        />
+        <Button className='tweetBox__tweetButton'>Tweet</Button>
       </form>
     </div>
   );
